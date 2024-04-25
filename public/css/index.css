@@ -1,0 +1,126 @@
+:root {
+	--color-fondo: rgb(255, 255, 255);
+	--color-texto: #000000;
+	--placeholder: #888; /* Color para el placeholder */
+	--scrollbar-bg: #ccc; /* Color de fondo para la scrollbar */
+	--scrollbar-thumb: #888; /* Color para el thumb de la scrollbar */
+}
+
+body {
+	background-color: var(--color-fondo);
+	color: var(--color-texto);
+	font-family: Arial, sans-serif; /* Tipo de letra para toda la página */
+}
+
+/* Estilos para el placeholder */
+::placeholder {
+	color: var(--placeholder);
+	opacity: 1; /* Opacidad del placeholder */
+}
+
+/* Estilos para la scrollbar */
+::-webkit-scrollbar {
+	width: 12px; /* Ancho de la scrollbar */
+}
+
+::-webkit-scrollbar-track {
+	background: var(--scrollbar-bg); /* Color de fondo de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(
+		--scrollbar-thumb
+	); /* Color del thumb de la scrollbar */
+	border-radius: 6px; /* Bordes redondeados para el thumb */
+	border: 3px solid var(--scrollbar-bg); /* Borde para el thumb */
+}
+
+body.dark-mode {
+	--color-fondo: #202020;
+	--color-texto: whitesmoke;
+	--placeholder: #aaa; /* Color más claro para el placeholder en modo oscuro */
+	--scrollbar-bg: #444; /* Color de fondo más oscuro para la scrollbar en modo oscuro */
+	--scrollbar-thumb: #aaa; /* Color más claro para el thumb de la scrollbar en modo oscuro */
+}
+
+/* Estilos para el botón de cambio de modo */
+#modoBtn {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 8px 12px; /* Añade espacio alrededor del icono */
+	transition: background-color 0.3s; /* Efecto de transición */
+}
+
+/* Estilos para los iconos del botón */
+#iconoModo {
+	font-size: 24px; /* Tamaño del icono */
+	margin-right: 8px; /* Espacio a la derecha del icono */
+}
+
+#iconoModo.bi-moon {
+	color: #333; /* Color del icono de la luna */
+}
+
+#iconoModo.bi-sun {
+	color: #ff0; /* Color del icono del sol */
+}
+
+body.dark-mode #iconoModo.bi-sun {
+	color: #ffcc00; /* Color del icono del sol en modo oscuro */
+}
+
+/* Estilos para el placeholder en modo claro */
+body:not(.dark-mode) #txtMensaje::placeholder {
+	color: #6c757d; /* Un gris oscuro para un buen contraste en modo claro */
+}
+
+/* Estilos para el placeholder en modo oscuro */
+body.dark-mode #txtMensaje::placeholder {
+	color: #ced4da; /* Un gris claro para un buen contraste en modo oscuro */
+}
+
+/* Estilos para la scrollbar en el contenedor de mensajes */
+#mensajeContainer::-webkit-scrollbar {
+	width: 8px; /* Ancho de la scrollbar */
+}
+
+#mensajeContainer::-webkit-scrollbar-track {
+	background: var(--scrollbar-bg); /* Color de fondo de la scrollbar */
+}
+
+#mensajeContainer::-webkit-scrollbar-thumb {
+	background-color: var(
+		--scrollbar-thumb
+	); /* Color del thumb de la scrollbar */
+	border-radius: 4px; /* Bordes redondeados para el thumb */
+}
+
+body.dark-mode #mensajeContainer::-webkit-scrollbar-track {
+	background: #2c2c2c; /* Color de fondo más oscuro para la scrollbar en modo oscuro */
+}
+
+body.dark-mode #mensajeContainer::-webkit-scrollbar-thumb {
+	background-color: #555; /* Color más claro para el thumb de la scrollbar en modo oscuro */
+}
+
+/* Estilo para el input en modo oscuro */
+body.dark-mode #txtMensaje {
+	background-color: #121212; /* Fondo más oscuro para modo oscuro */
+	color: var(--color-texto); /* Texto en color definido */
+}
+
+body.dark-mode #txtUid {
+	background-color: #121212; /* Fondo más oscuro para modo oscuro */
+	color: var(--color-texto); /* Texto en color definido */
+}
+
+/* Estilos para el placeholder en modo claro */
+body:not(.dark-mode) #txtUid::placeholder {
+	color: #6c757d; /* Un gris oscuro para un buen contraste en modo claro */
+}
+
+/* Estilos para el placeholder en modo oscuro */
+body.dark-mode #txtUid::placeholder {
+	color: #ced4da; /* Un gris claro para un buen contraste en modo oscuro */
+}
